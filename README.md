@@ -40,6 +40,19 @@ cd ~/ros2_ws/
 colcon build
 ```
 
+## 4. Git push 실패 시
+### 4.1 브랜치 확인하기 (확인 후 다시 2.3부분에 있는 git push -u origin main) 수정, main이 아니고 mater라면 수정
+```sh
+git branch
+```
+### 4.2 브랜치 생성 및 푸시 (브랜치 생성-> 커밋 -> 푸시)
+```sh
+git checkout -b main
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
+
 | Ubuntu | ROS 1 | ROS 2 |
 | ------ | ----- | ----- |
 | Ubuntu 22.04<br>EOL: April 2027[^4] | - | Humble<br>EOL: May 2027 |
